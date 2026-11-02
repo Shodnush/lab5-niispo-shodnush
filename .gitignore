@@ -1,0 +1,7 @@
+terraform.exe 
+terraform.zip 
+terraform_1.9.8_windows_amd64.zip 
+.terraform/ 
+*.tfstate 
+*.tfstate.backup 
+lab5-kind/ 

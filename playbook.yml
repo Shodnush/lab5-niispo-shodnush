@@ -1,0 +1,14 @@
+- name: Install and check zsh
+  hosts: local
+  become: yes
+  tasks:
+    - name: Ensure zsh is installed
+      ansible.builtin.apt:
+        name: zsh
+        state: present
+    - name: Check zsh version
+      ansible.builtin.command: zsh --version
+      register: zsh_version
+    - name: Print zsh version
+      ansible.builtin.debug:
+        var: zsh_version.stdout
